@@ -1,0 +1,102 @@
+name: Daily Chaldal scrape
+
+on:
+  schedule:
+    # 21:30 UTC = 03:30 Asia/Dhaka. Offset from the Othoba job so the two
+    # repos never compete for the same runner minutes.
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chaldal-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    # Pinned. `ubuntu-latest` started moving to Ubuntu 26.04 on 2026-10-19,
+    # which is the day this job stopped producing data. 24.04 is the image
+    # every good run so far used.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330      # GitHub's hard ceiling is 360
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Show environment
+        run: |
+          echo "image: $ImageOS $ImageVersion"
+          grep PRETTY_NAME /etc/os-release
+          google-chrome --version
+          chromedriver --version || true
+          python --version
+
+      - name: Smoke test (3 categories)
+        # Fails in about a minute instead of after hours if Chaldal is
+        # blocking the runner or the page layout has changed.
+        env:
+          MAX_CATEGORIES: '3'
+          MIN_ROWS: '1'
+          DRY_RUN: '1'
+          DEBUG_DIR: data/debug
+        run: python chaldal_daily.py
+
+      - name: Scrape
+        env:
+          WORKERS: '4'
+          MIN_ROWS: '2500'
+          SCROLL_STALLS: '6'      # raise if a run comes back short
+          SCROLL_PAUSE: '0.8'
+          PANEL: chaldal_prices.csv
+          RAW_DIR: data/raw
+          KEEP_RAW: '1'
+          CATEGORIES: categories.txt
+          DEAD_FILE: data/dead_slugs.json
+          DEBUG_DIR: data/debug
+        run: python chaldal_daily.py
+
+      - name: Commit the day's data
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add chaldal_prices.csv data/raw/ data/dead_slugs.json
+          if git diff --staged --quiet; then
+            echo "No new data to commit."
+          else
+            git commit -m "prices: $(TZ=Asia/Dhaka date +%F)"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: chaldal-csv
+          path: |
+            chaldal_prices.csv
+            data/raw/*.csv
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload debug pages
+        # HTML + screenshots of categories that returned no products. Open
+        # these first when a run fails: they show what Chaldal actually served.
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: chaldal-debug
+          path: data/debug/
+          retention-days: 14
+          if-no-files-found: ignore
