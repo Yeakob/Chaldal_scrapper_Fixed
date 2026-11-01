@@ -1,0 +1,268 @@
+# Chaldal category URLs, one per line. Blank lines and '#' comments ignored.
+#
+# All 214 categories are ACTIVE, matching the Colab script exactly. The food
+# index only needs the first 12 sections, but the non-food ones are left on so
+# the SKU count matches the existing dataset. Comment out a section with '#'
+# to drop it and shorten the run.
+
+# --- Fresh Produce ---
+https://chaldal.com/fresh-vegetable
+https://chaldal.com/fresh-fruit
+
+# --- Meat & Fish ---
+https://chaldal.com/chicken-poultry
+https://chaldal.com/premium-perishables
+https://chaldal.com/frozen-fish
+https://chaldal.com/meat-new
+https://chaldal.com/tofu-meat-alternatives
+https://chaldal.com/dried-fish
+
+# --- Cooking Essentials ---
+https://chaldal.com/spices
+https://chaldal.com/salt-sugar
+https://chaldal.com/rices
+https://chaldal.com/dal-or-lentil
+https://chaldal.com/ready-mix
+https://chaldal.com/shemai-suji
+https://chaldal.com/miscellaneous
+https://chaldal.com/oil
+https://chaldal.com/colors-flavours
+https://chaldal.com/ghee
+https://chaldal.com/premium-ingredients
+
+# --- Sauces & Pickles ---
+https://chaldal.com/tomato-sauces
+https://chaldal.com/pickles
+https://chaldal.com/cooking-sauces
+https://chaldal.com/other-sauces
+
+# --- Dairy & Eggs ---
+https://chaldal.com/eggs
+https://chaldal.com/powder-milk
+https://chaldal.com/liquid-uht-milk
+https://chaldal.com/yogurt
+https://chaldal.com/cheeses
+https://chaldal.com/condensed-milk-cream
+https://chaldal.com/butter-sour-cream
+
+# --- Breakfast ---
+https://chaldal.com/breads
+https://chaldal.com/tea-coffee-2
+https://chaldal.com/local-breakfast
+https://chaldal.com/cereals
+https://chaldal.com/honey
+https://chaldal.com/spreads-syrups
+https://chaldal.com/energy-boosters
+https://chaldal.com/jams-jellies
+
+# --- Candy & Chocolate ---
+https://chaldal.com/chocolates
+https://chaldal.com/wafers
+https://chaldal.com/candies
+https://chaldal.com/mints-mouth-fresheners
+https://chaldal.com/halal-marshmallows
+
+# --- Snacks ---
+https://chaldal.com/noodles
+https://chaldal.com/cookies-2
+https://chaldal.com/local-snacks
+https://chaldal.com/chips-pretzels
+https://chaldal.com/plain-biscuits
+https://chaldal.com/toast-biscuits
+https://chaldal.com/cream-biscuits
+https://chaldal.com/pasta-macaroni
+https://chaldal.com/soups
+https://chaldal.com/popcorn-nuts
+https://chaldal.com/salted-biscuits
+https://chaldal.com/cakes
+https://chaldal.com/salad-dressing
+
+# --- Beverages ---
+https://chaldal.com/beverages-tea
+https://chaldal.com/soft-drinks
+https://chaldal.com/coffees
+https://chaldal.com/powder-mixes
+https://chaldal.com/juice
+https://chaldal.com/water
+
+# --- Baking ---
+https://chaldal.com/flour
+https://chaldal.com/nuts-dried-fruits
+https://chaldal.com/baking-ingredients
+https://chaldal.com/baking-tools
+https://chaldal.com/baking-mixes
+
+# --- Frozen & Canned ---
+https://chaldal.com/chicken-snacks
+https://chaldal.com/frozen-parathas-roti
+https://chaldal.com/vegetable-snacks
+https://chaldal.com/mushroom-cans
+https://chaldal.com/beef-snacks
+https://chaldal.com/vegetable-cans
+https://chaldal.com/fish-cans
+https://chaldal.com/canned-fruits
+https://chaldal.com/fish-snacks
+https://chaldal.com/ice-cream
+
+# --- Diabetic Food ---
+https://chaldal.com/diabetic-food
+
+# --- Cleaning Supplies ---
+https://chaldal.com/dish-wash
+https://chaldal.com/laundry
+https://chaldal.com/toilet-cleaning
+https://chaldal.com/paper-products
+https://chaldal.com/pest-control
+https://chaldal.com/floor-glass-cleaners
+https://chaldal.com/cleaning-accessories
+https://chaldal.com/air-freshners
+https://chaldal.com/trash-bags
+https://chaldal.com/shoe-care
+https://chaldal.com/trash-bin-basket
+
+# --- Personal Care ---
+https://chaldal.com/womens-soaps
+https://chaldal.com/hair-care
+https://chaldal.com/female-shampoo
+https://chaldal.com/feminine-care
+https://chaldal.com/female-moisturizer
+https://chaldal.com/face-wash-scrub
+https://chaldal.com/female-deo
+https://chaldal.com/womens-perfume
+https://chaldal.com/womens-shower-gel
+https://chaldal.com/masks-cleansers
+https://chaldal.com/serum-oil-toners
+https://chaldal.com/mens-soaps
+https://chaldal.com/mens-perfume
+https://chaldal.com/shampoo
+https://chaldal.com/shaving-needs
+https://chaldal.com/beard-grooming
+https://chaldal.com/deodorants
+https://chaldal.com/razors-blades
+https://chaldal.com/mens-hair-care
+https://chaldal.com/lotion-cream
+https://chaldal.com/mens-facewash
+https://chaldal.com/mens-shower-gels
+
+# --- Hygiene ---
+https://chaldal.com/liquid-handwash
+https://chaldal.com/hand-sanitizer
+https://chaldal.com/tissue-wipes
+
+# --- Oral Care ---
+https://chaldal.com/toothpastes
+https://chaldal.com/toothbrushes
+https://chaldal.com/mouthwash-others
+
+# --- Skin Care ---
+https://chaldal.com/soaps
+https://chaldal.com/lotions
+https://chaldal.com/petroleum-jelly
+https://chaldal.com/creams
+https://chaldal.com/face-wash-mask
+https://chaldal.com/body-hair-oil
+https://chaldal.com/lipsticks-lip-balm
+https://chaldal.com/talcom-powder
+https://chaldal.com/hair-color
+
+# --- Health & Wellness ---
+https://chaldal.com/keto-food
+https://chaldal.com/antiseptics
+https://chaldal.com/handwash-handrub
+https://chaldal.com/herbal-products
+https://chaldal.com/food-supplements
+https://chaldal.com/face-masks-safety
+https://chaldal.com/family-planning
+https://chaldal.com/mouthwashes
+https://chaldal.com/adult-diapers
+https://chaldal.com/multipurpose-spray
+https://chaldal.com/medical-devices
+
+# --- Baby Care ---
+https://chaldal.com/medium-2
+https://chaldal.com/large-2
+https://chaldal.com/extra-large-15-kg-diapers
+https://chaldal.com/small-2
+https://chaldal.com/newborn-2
+https://chaldal.com/milk-juice-drinks
+https://chaldal.com/toddler-food
+https://chaldal.com/formula
+https://chaldal.com/bath-skincare
+https://chaldal.com/wipes
+https://chaldal.com/baby-oral-care
+https://chaldal.com/newborn-essentials
+https://chaldal.com/baby-accessories
+https://chaldal.com/feeders
+
+# --- Home & Kitchen ---
+https://chaldal.com/kitchen-accessories
+https://chaldal.com/kitchen-appliances
+https://chaldal.com/lights
+https://chaldal.com/mosquito-swatter
+https://chaldal.com/electric-multiplug
+https://chaldal.com/electronics
+https://chaldal.com/tools-hardware
+https://chaldal.com/baskets-buckets
+https://chaldal.com/box-container
+https://chaldal.com/gardening
+https://chaldal.com/rack-organizer
+https://chaldal.com/disposables
+
+# --- Stationery & Office ---
+https://chaldal.com/batteries
+https://chaldal.com/calculators
+https://chaldal.com/glue-tapes
+https://chaldal.com/stapler-punch
+https://chaldal.com/organizing-accessories
+https://chaldal.com/cutting-2
+https://chaldal.com/file-folder
+https://chaldal.com/measuring
+https://chaldal.com/desk-organizers
+https://chaldal.com/pens
+https://chaldal.com/highlighters
+https://chaldal.com/printer-ink
+https://chaldal.com/pencils
+https://chaldal.com/erasers-correction-fluid
+https://chaldal.com/printing-paper
+https://chaldal.com/notebook-diary
+https://chaldal.com/card-envelope
+https://chaldal.com/school-supplies
+https://chaldal.com/color-pencil
+https://chaldal.com/pastel-crayon
+https://chaldal.com/oil-water-color
+
+# --- Pet Care ---
+https://chaldal.com/cat-food
+https://chaldal.com/cat-litters
+https://chaldal.com/kitten-food
+https://chaldal.com/dog-food
+https://chaldal.com/pet-grooming-cleaning
+https://chaldal.com/bird-food
+https://chaldal.com/aquarium-fish-food
+
+# --- Toys, Sports & Lifestyle ---
+https://chaldal.com/toys-sports
+https://chaldal.com/beauty
+https://chaldal.com/fashion-lifestyle
+https://chaldal.com/vehicle-essentials
+https://chaldal.com/dolls-action-figures
+https://chaldal.com/plush-stuffed-toys
+https://chaldal.com/learning-toys
+https://chaldal.com/building-sets
+https://chaldal.com/kids-books
+https://chaldal.com/sports
+https://chaldal.com/board-game
+https://chaldal.com/party-supplies
+
+# --- Cosmetics & Accessories ---
+https://chaldal.com/eyes
+https://chaldal.com/lips
+https://chaldal.com/nails
+https://chaldal.com/tools-brushes
+https://chaldal.com/face
+https://chaldal.com/cloth-shopping
+https://chaldal.com/money-bags
+https://chaldal.com/travel-accessories
+https://chaldal.com/bed-blanket
+https://chaldal.com/baby-clothes
+https://chaldal.com/ladies-handbags-clutches
